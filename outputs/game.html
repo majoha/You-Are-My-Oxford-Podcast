@@ -291,7 +291,7 @@
             if (valid) state.used.add(player.id);
             state.last = { player, by: 'you', valid }; addHistory(player, 'you', valid);
             $('prompt').textContent = `You named ${player.name}.`;
-            $('subtext').textContent = valid ? 'The computer is checking your pick…' : 'That name is not in the roster. The computer may challenge it.';
+            $('subtext').textContent = valid ? 'The computer is checking your pick…' : 'The computer may challenge it.';
             $('notice').textContent = corrected ? `Matched your spelling to ${player.name}.` : valid ? '' : 'UNMATCHED PICK · CHALLENGEABLE';
                 $('nameInput').value = ''; $('nameInput').dataset.playerId = ''; $('suggestions').hidden = true; $('entryHint').textContent = '';
             setTurn('ai'); setTimeout(aiTurn, 2100);
