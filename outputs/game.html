@@ -262,7 +262,7 @@
             }
             $('seasonLabel').textContent = `SEASON · ${state.season}`;
             $('prompt').textContent = `${$('level').value} is choosing a joker…`; $('subtext').textContent = 'Type your secret joker below.';
-            $('entryHint').textContent = 'Type at least two letters to see suggestions.'; setTurn('you');
+            $('entryHint').textContent = ''; setTurn('you');
         }
         function submitName(event) {
             event.preventDefault(); if (state.over || state.turn !== 'you') return;
@@ -293,7 +293,7 @@
             $('prompt').textContent = `You named ${player.name}.`;
             $('subtext').textContent = valid ? 'The computer is checking your pick…' : 'That name is not in the roster. The computer may challenge it.';
             $('notice').textContent = corrected ? `Matched your spelling to ${player.name}.` : valid ? '' : 'UNMATCHED PICK · CHALLENGEABLE';
-            $('nameInput').value = ''; $('nameInput').dataset.playerId = ''; $('suggestions').hidden = true; $('entryHint').textContent = 'Type at least two letters to see suggestions.';
+                $('nameInput').value = ''; $('nameInput').dataset.playerId = ''; $('suggestions').hidden = true; $('entryHint').textContent = '';
             setTurn('ai'); setTimeout(aiTurn, 2100);
         }
         async function aiTurn() {
