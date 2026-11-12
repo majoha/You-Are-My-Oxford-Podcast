@@ -3,7 +3,6 @@ import pg from 'pg';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { seedDatabase } from './db/seed.mjs';
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -67,7 +66,6 @@ async function start() {
     if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL is required.');
     const schema = await readFile(path.join(root, 'db', 'schema.sql'), 'utf8');
     await pool.query(schema);
-    for (const summary of await seedDatabase(pool)) console.log(`${summary}.`);
     app.listen(port, '0.0.0.0', () => console.log(`Jon Narbett game listening on ${port}.`));
 }
 

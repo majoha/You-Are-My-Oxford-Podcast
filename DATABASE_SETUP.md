@@ -1,6 +1,6 @@
-# Render database prototype
+# Render database setup
 
-The prototype has three Rage Online season files in `outputs/data/`. The game randomly draws from those seasons. When the app is served by the Node web service, it asks `/api/game/new` for a random season, its eligible roster, and players from other seasons that the computer can use as wrong picks. The static-site version falls back to the same three files while the API is not deployed.
+The game asks `/api/game/new` for a random season, its eligible roster, and players from other seasons that the computer can use as wrong picks. The web service creates/checks the database schema at startup but does not import season JSON files. This keeps ordinary code deploys from reimporting the dataset. Season data is imported only when `npm run db:seed` is run deliberately.
 
 ## Deploy the API and game on Render
 
@@ -9,16 +9,14 @@ The prototype has three Rage Online season files in `outputs/data/`. The game ra
 3. Leave **Root Directory** empty. Set **Build Command** to `npm install` and **Start Command** to `npm start`.
 4. Choose the same region as the Postgres database.
 5. In the service’s **Environment** settings, add `DATABASE_URL` using the database’s **Internal Database URL**. Keep it in Render; it does not belong in the game files or GitHub.
-6. Deploy. On startup, the service creates the tables and imports the three JSON season files. It serves the landing page, game page, and API from one service.
+6. Deploy. The service creates/checks the tables and serves the landing page, game page, and API from one service. It does not import season data automatically.
 
 The health endpoint is `/api/health`. The randomly selected game payload is `/api/game/new`.
 
-## Included trial seasons
+## Import or update season data
 
-- 1982/83
-- 2002/03
-- 2025/26
+Put files named `rage-online-*.json` in `outputs/data/`. To import or update the database, run `npm run db:seed` in an environment where `DATABASE_URL` points to the intended Postgres database. In Render, run the command from the web service shell; the service environment already provides its `DATABASE_URL`. Use the database's Internal Database URL for commands run from another Render service in the same region, or its External Database URL when connecting from your PC.
 
-Season imports retain all players listed in the source appearance table, including zero-appearance records. The game treats only players with one or more appearances as valid picks. Computer bluffs are drawn from known Oxford players who did not appear in the selected season.
+The seed command imports every matching season file. It retains all players listed in each source appearance table, including zero-appearance records. The game treats only players with one or more appearances as valid picks. Computer bluffs are drawn from known Oxford players who did not appear in the selected season.
 
-To refresh the three source files, run `npm run import:rage`. To manually seed a database from a machine with Node.js and network access, set `DATABASE_URL` and run `npm run db:seed`. The Render app also imports the bundled files on startup.
+To refresh the three original trial source files, run `npm run import:rage`; to add or refresh your full archive, place the exported JSON files in `outputs/data/` and run `npm run db:seed`.
