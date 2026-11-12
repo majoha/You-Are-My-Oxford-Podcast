@@ -260,24 +260,24 @@
             $('subtext').textContent = valid ? 'The computer is checking your pick…' : 'That name is not in the roster. The computer may challenge it.';
             $('notice').textContent = corrected ? `Matched your spelling to ${player.name}.` : valid ? '' : 'UNMATCHED PICK · CHALLENGEABLE';
             $('nameInput').value = ''; $('nameInput').dataset.playerId = ''; $('suggestions').hidden = true; $('entryHint').textContent = 'Type at least two letters to see suggestions.';
-            setTurn('ai'); setTimeout(aiTurn, 1100);
+            setTurn('ai'); setTimeout(aiTurn, 2100);
         }
         async function aiTurn() {
             if (state.over) return;
             const level = $('level').value, cfgv = cfg[level];
             if (state.last?.by === 'you') {
                 $('prompt').textContent = `${level} is checking your pick…`; $('subtext').textContent = `${state.last.player.name} — does that name belong in this season’s squad?`;
-                await new Promise(resolve => setTimeout(resolve, 1500));
+                await new Promise(resolve => setTimeout(resolve, 2500));
                 if (!state.last.valid) {
                     if (Math.random() < 1 / cfgv.challenge) {
                         $('prompt').textContent = `${level} is challenging your pick!`; $('subtext').textContent = `The computer says ${state.last.player.name} did not play this season.`; $('notice').textContent = 'CORRECT CHALLENGE';
-                        await new Promise(resolve => setTimeout(resolve, 1500)); end(false, `${level} correctly challenged ${state.last.player.name}. An incorrect player pick loses the game.`); return;
+                        await new Promise(resolve => setTimeout(resolve, 2500)); end(false, `${level} correctly challenged ${state.last.player.name}. An incorrect player pick loses the game.`); return;
                     }
                     $('prompt').textContent = `${level} lets that pick pass.`; $('subtext').textContent = `${state.last.player.name} stands. ${level} is choosing a player…`; $('notice').textContent = 'NO CHALLENGE';
                 } else {
                     $('prompt').textContent = `${level} accepts your pick.`; $('subtext').textContent = 'The name stands. The computer is choosing a player…'; $('notice').textContent = 'PICK ACCEPTED';
                 }
-                await new Promise(resolve => setTimeout(resolve, 1200));
+                await new Promise(resolve => setTimeout(resolve, 2200));
             }
             const available = players.filter(player => player.id === state.yourJoker.id || !state.used.has(player.id));
             if (Math.random() < 1 / cfgv.miss) {
