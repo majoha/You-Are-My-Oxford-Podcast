@@ -1,0 +1,656 @@
+{
+  "season": "1985/86",
+  "source": "Rage Online",
+  "sourceUrl": "https://rageonline.co.uk/mainpage/season/27",
+  "importedAt": "2026-11-12T23:07:52.359715+00:00",
+  "attribution": "Player appearance data sourced from Rage Online (https://rageonline.co.uk/).",
+  "extractionNotes": "Includes players listed in the season appearance table, including zero-appearance rows; records appearances by competition.",
+  "competitionColumns": [
+    "FA Cup",
+    "Full Members Cup",
+    "League",
+    "League Cup"
+  ],
+  "sourceRows": 22,
+  "includedPlayers": 22,
+  "players": [
+    {
+      "rageOnlinePlayerId": 1,
+      "name": "John Aldridge",
+      "starts": 53,
+      "substituteAppearances": 0,
+      "totalAppearances": 53,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 5,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 39,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 7,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 16,
+      "name": "Gary Barnett",
+      "starts": 0,
+      "substituteAppearances": 2,
+      "totalAppearances": 2,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 0,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 27,
+      "name": "Gary Briggs",
+      "starts": 51,
+      "substituteAppearances": 0,
+      "totalAppearances": 51,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 38,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 7,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 29,
+      "name": "Kevin Brock",
+      "starts": 25,
+      "substituteAppearances": 5,
+      "totalAppearances": 30,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 18,
+          "substituteAppearances": 5
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 46,
+      "name": "Jeremy Charles",
+      "starts": 31,
+      "substituteAppearances": 6,
+      "totalAppearances": 37,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 3,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League",
+          "starts": 23,
+          "substituteAppearances": 5
+        },
+        {
+          "competition": "League Cup",
+          "starts": 5,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 102,
+      "name": "Billy Hamilton",
+      "starts": 8,
+      "substituteAppearances": 0,
+      "totalAppearances": 8,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 8,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 103,
+      "name": "Steve Hardwick",
+      "starts": 31,
+      "substituteAppearances": 0,
+      "totalAppearances": 31,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 23,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 110,
+      "name": "Trevor Hebberd",
+      "starts": 56,
+      "substituteAppearances": 0,
+      "totalAppearances": 56,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 5,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 41,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 8,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 118,
+      "name": "Ray Houghton",
+      "starts": 49,
+      "substituteAppearances": 0,
+      "totalAppearances": 49,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 5,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 35,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 7,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 129,
+      "name": "Mark Jones",
+      "starts": 5,
+      "substituteAppearances": 6,
+      "totalAppearances": 11,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 0,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "League",
+          "starts": 4,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 2
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 131,
+      "name": "Alan Judge",
+      "starts": 26,
+      "substituteAppearances": 0,
+      "totalAppearances": 26,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 19,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 142,
+      "name": "David Langan",
+      "starts": 40,
+      "substituteAppearances": 2,
+      "totalAppearances": 42,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 32,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "League Cup",
+          "starts": 5,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 146,
+      "name": "David Leworthy",
+      "starts": 9,
+      "substituteAppearances": 0,
+      "totalAppearances": 9,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 7,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 162,
+      "name": "Brian McDermott",
+      "starts": 2,
+      "substituteAppearances": 2,
+      "totalAppearances": 4,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 2,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 164,
+      "name": "Bobby McDonald",
+      "starts": 17,
+      "substituteAppearances": 1,
+      "totalAppearances": 18,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 2,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League",
+          "starts": 14,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 182,
+      "name": "Steve Perryman",
+      "starts": 9,
+      "substituteAppearances": 0,
+      "totalAppearances": 9,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 9,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 184,
+      "name": "Les Phillips",
+      "starts": 41,
+      "substituteAppearances": 1,
+      "totalAppearances": 42,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 28,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 7,
+          "substituteAppearances": 1
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 192,
+      "name": "Peter Rhoades-Brown",
+      "starts": 20,
+      "substituteAppearances": 7,
+      "totalAppearances": 27,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 3,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League",
+          "starts": 12,
+          "substituteAppearances": 5
+        },
+        {
+          "competition": "League Cup",
+          "starts": 5,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 207,
+      "name": "Malcolm Shotton",
+      "starts": 57,
+      "substituteAppearances": 0,
+      "totalAppearances": 57,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 5,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 42,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 8,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 212,
+      "name": "Neil Slatter",
+      "starts": 34,
+      "substituteAppearances": 0,
+      "totalAppearances": 34,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 22,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 6,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 226,
+      "name": "Andy Thomas",
+      "starts": 19,
+      "substituteAppearances": 5,
+      "totalAppearances": 24,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League",
+          "starts": 12,
+          "substituteAppearances": 5
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 233,
+      "name": "John Trewick",
+      "starts": 44,
+      "substituteAppearances": 4,
+      "totalAppearances": 48,
+      "competitions": [
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Full Members Cup",
+          "starts": 2,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "League",
+          "starts": 34,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 6,
+          "substituteAppearances": 1
+        }
+      ]
+    }
+  ]
+}

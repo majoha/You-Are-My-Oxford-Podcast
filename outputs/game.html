@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Yellow Card | OUFC player challenge</title>
+    <title>You Are My Oxford · Podcast</title>
     <link rel="stylesheet" href="./game.css">
 </head>
 
@@ -12,7 +12,7 @@
     <header class="top">
         <div class="brand">You Are My Oxford<i> · </i>Podcast</div>
         <div class="game-title">
-            <div class="eyebrow">The Oxford United memory game</div>
+            <div class="eyebrow">The Unofficial Oxford United memory game</div>
             <h1>Know your Yellows?</h1>
         </div>
         <div class="topright">AN OUFC PLAYER CHALLENGE <span>● LIVE</span></div>
@@ -39,6 +39,10 @@
                         <option value="Dan">Dan · Very hard</option>
                     </select></label><button id="newgame">New game ↗</button></div>
         </section>
+        <div class="rules-row">
+            <button class="rules-trigger" id="rulesOpen" type="button" aria-haspopup="dialog"
+                aria-controls="rulesDialog">How to play <span>＋</span></button>
+        </div>
         <div class="scoreline">
             <div class="side" id="aiSide">COMPUTER<strong id="aiName">James</strong></div>
             <div class="season-tag" id="seasonLabel">SEASON · 2002/03</div>
@@ -83,8 +87,8 @@
             <div class="history-rack" id="historyRack" aria-live="polite">
                 <div class="history-empty">Players named during the match will appear here.</div>
             </div>
-            <div class="help">Squad season data is sourced from <a href="https://rageonline.co.uk/" target="_blank"
-                    rel="noopener noreferrer">Rage Online</a>.</div>
+            <div class="help">Squad season data is sourced, with permission, from <a href="https://rageonline.co.uk/"
+                    target="_blank" rel="noopener noreferrer">Rage Online</a>.</div>
         </section>
     </main>
     <div class="veil" id="veil">
@@ -93,6 +97,36 @@
             <h2 id="resultTitle">Result</h2>
             <p id="resultText"></p><button class="primary" id="again">Play again →</button>
         </div>
+    </div>
+    <div class="rules-overlay" id="rulesOverlay" hidden>
+        <section class="rules-dialog" id="rulesDialog" role="dialog" aria-modal="true" aria-labelledby="rulesTitle"
+            tabindex="-1">
+            <button class="rules-close" id="rulesClose" type="button" aria-label="Close rules">×</button>
+            <div class="eyebrow">JON NARBETT GAME</div>
+            <h2 id="rulesTitle">How to play</h2>
+            <ol class="rules-list">
+                <li>A season is chosen at random. You and the computer each choose a secret joker from that season’s
+                    players.</li>
+                <li>Take turns naming Oxford United players who made an appearance in any competition that season.</li>
+                <li>You can challenge the computer’s last pick if you think that player did not appear that season. A
+                    correct challenge wins; an incorrect challenge loses.</li>
+                <li>If either player names their opponent’s joker, they lose immediately.</li>
+            </ol>
+            <div class="rules-levels">
+                <h3>Computer levels</h3>
+                <ul>
+                    <li><strong>James · Easy</strong><span>Wrong guess: 1 in 4 · Challenges: 1 in 5 incorrect
+                            picks</span></li>
+                    <li><strong>Theo · Medium</strong><span>Wrong guess: 1 in 5 · Challenges: 1 in 4 incorrect
+                            picks</span></li>
+                    <li><strong>Matt · Hard</strong><span>Wrong guess: 1 in 6 · Challenges: 1 in 3 incorrect
+                            picks</span></li>
+                    <li><strong>Dan · Very hard</strong><span>Wrong guess: 1 in 7 · Challenges every incorrect
+                            pick</span></li>
+                </ul>
+            </div>
+            <button class="primary rules-done" id="rulesDone" type="button">Got it</button>
+        </section>
     </div>
     <script>
         let players = [];
@@ -309,6 +343,31 @@
         $('nameInput').addEventListener('input', renderSuggestions);
         $('nameForm').addEventListener('submit', submitName);
         $('challenge').addEventListener('click', challenge);
+        const rulesOverlay = $('rulesOverlay');
+        const rulesOpen = $('rulesOpen');
+        function closeRules() {
+            rulesOverlay.hidden = true;
+            rulesOpen.focus();
+        }
+        rulesOpen.addEventListener('click', () => {
+            rulesOverlay.hidden = false;
+            $('rulesClose').focus();
+        });
+        $('rulesClose').addEventListener('click', closeRules);
+        $('rulesDone').addEventListener('click', closeRules);
+        rulesOverlay.addEventListener('click', event => {
+            if (event.target === rulesOverlay) closeRules();
+        });
+        document.addEventListener('keydown', event => {
+            if (rulesOverlay.hidden) return;
+            if (event.key === 'Escape') { closeRules(); return; }
+            if (event.key === 'Tab') {
+                const focusable = [...$('rulesDialog').querySelectorAll('button:not([disabled])')];
+                const first = focusable[0], last = focusable[focusable.length - 1];
+                if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+                else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+            }
+        });
         $('newgame').onclick = start; $('again').onclick = () => { $('veil').style.display = 'none'; start(); };
         $('level').onchange = () => { if (state.started) start(); };
         start();

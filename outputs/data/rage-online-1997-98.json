@@ -1,0 +1,737 @@
+{
+  "season": "1997/98",
+  "source": "Rage Online",
+  "sourceUrl": "https://rageonline.co.uk/mainpage/season/20",
+  "importedAt": "2026-11-12T23:07:32.137764+00:00",
+  "attribution": "Player appearance data sourced from Rage Online (https://rageonline.co.uk/).",
+  "extractionNotes": "Includes players listed in the season appearance table, including zero-appearance rows; records appearances by competition.",
+  "competitionColumns": [
+    "League",
+    "League Cup",
+    "FA Cup"
+  ],
+  "sourceRows": 30,
+  "includedPlayers": 30,
+  "players": [
+    {
+      "rageOnlinePlayerId": 2,
+      "name": "Martin Aldridge",
+      "starts": 16,
+      "substituteAppearances": 13,
+      "totalAppearances": 29,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 13,
+          "substituteAppearances": 11
+        },
+        {
+          "competition": "League Cup",
+          "starts": 3,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 5,
+      "name": "Mark Angel",
+      "starts": 11,
+      "substituteAppearances": 17,
+      "totalAppearances": 28,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 9,
+          "substituteAppearances": 14
+        },
+        {
+          "competition": "League Cup",
+          "starts": 2,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 1
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 13,
+      "name": "Nicky Banger",
+      "starts": 22,
+      "substituteAppearances": 11,
+      "totalAppearances": 33,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 18,
+          "substituteAppearances": 10
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 18,
+      "name": "Joey Beauchamp",
+      "starts": 51,
+      "substituteAppearances": 0,
+      "totalAppearances": 51,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 44,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 6,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 53,
+      "name": "Jamie Cook",
+      "starts": 9,
+      "substituteAppearances": 12,
+      "totalAppearances": 21,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 9,
+          "substituteAppearances": 11
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 1
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 59,
+      "name": "Steve Davis",
+      "starts": 15,
+      "substituteAppearances": 0,
+      "totalAppearances": 15,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 15,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 63,
+      "name": "O'Neill Donaldson",
+      "starts": 6,
+      "substituteAppearances": 0,
+      "totalAppearances": 6,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 6,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 82,
+      "name": "Bobby Ford",
+      "starts": 23,
+      "substituteAppearances": 1,
+      "totalAppearances": 24,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 17,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 6,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 83,
+      "name": "Mike Ford",
+      "starts": 25,
+      "substituteAppearances": 0,
+      "totalAppearances": 25,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 22,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 86,
+      "name": "Kevin Francis",
+      "starts": 15,
+      "substituteAppearances": 0,
+      "totalAppearances": 15,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 15,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 94,
+      "name": "Phil Gilchrist",
+      "starts": 41,
+      "substituteAppearances": 4,
+      "totalAppearances": 45,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 35,
+          "substituteAppearances": 4
+        },
+        {
+          "competition": "League Cup",
+          "starts": 5,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 98,
+      "name": "Martin Gray",
+      "starts": 30,
+      "substituteAppearances": 3,
+      "totalAppearances": 33,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 28,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "League Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 124,
+      "name": "Elliot Jackson",
+      "starts": 6,
+      "substituteAppearances": 0,
+      "totalAppearances": 6,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 127,
+      "name": "Nigel Jemson",
+      "starts": 30,
+      "substituteAppearances": 0,
+      "totalAppearances": 30,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 24,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 5,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 158,
+      "name": "Simon Marsh",
+      "starts": 15,
+      "substituteAppearances": 1,
+      "totalAppearances": 16,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 13,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 159,
+      "name": "Stuart Massey",
+      "starts": 15,
+      "substituteAppearances": 4,
+      "totalAppearances": 19,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 14,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 172,
+      "name": "Matt Murphy",
+      "starts": 15,
+      "substituteAppearances": 17,
+      "totalAppearances": 32,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 15,
+          "substituteAppearances": 14
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 185,
+      "name": "Paul Powell",
+      "starts": 12,
+      "substituteAppearances": 10,
+      "totalAppearances": 22,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 11,
+          "substituteAppearances": 9
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 187,
+      "name": "Darren Purse",
+      "starts": 34,
+      "substituteAppearances": 1,
+      "totalAppearances": 35,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 27,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 6,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 191,
+      "name": "Christophe Remy",
+      "starts": 17,
+      "substituteAppearances": 4,
+      "totalAppearances": 21,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 13,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 1
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 195,
+      "name": "Les Robinson",
+      "starts": 53,
+      "substituteAppearances": 0,
+      "totalAppearances": 53,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 46,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 6,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 197,
+      "name": "Andrew Rose",
+      "starts": 0,
+      "substituteAppearances": 1,
+      "totalAppearances": 1,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 215,
+      "name": "Dave Smith",
+      "starts": 50,
+      "substituteAppearances": 1,
+      "totalAppearances": 51,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 43,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 6,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 622,
+      "name": "Mark Stevens",
+      "starts": 0,
+      "substituteAppearances": 1,
+      "totalAppearances": 1,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 234,
+      "name": "Arjan Van Heusden",
+      "starts": 13,
+      "substituteAppearances": 0,
+      "totalAppearances": 13,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 11,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 244,
+      "name": "Simon Weatherstone",
+      "starts": 2,
+      "substituteAppearances": 9,
+      "totalAppearances": 11,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 2,
+          "substituteAppearances": 9
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 246,
+      "name": "Phil Whelan",
+      "starts": 7,
+      "substituteAppearances": 2,
+      "totalAppearances": 9,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 6,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "League Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 248,
+      "name": "Phil Whitehead",
+      "starts": 34,
+      "substituteAppearances": 0,
+      "totalAppearances": 34,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 32,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 253,
+      "name": "Brian Wilsterman",
+      "starts": 16,
+      "substituteAppearances": 9,
+      "totalAppearances": 25,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 15,
+          "substituteAppearances": 9
+        },
+        {
+          "competition": "League Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 256,
+      "name": "Anthony Wright",
+      "starts": 0,
+      "substituteAppearances": 1,
+      "totalAppearances": 1,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    }
+  ]
+}

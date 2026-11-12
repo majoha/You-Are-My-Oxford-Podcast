@@ -1,0 +1,1207 @@
+{
+  "season": "2007/08",
+  "source": "Rage Online",
+  "sourceUrl": "https://rageonline.co.uk/mainpage/season/114",
+  "importedAt": "2026-11-12T23:07:15.238079+00:00",
+  "attribution": "Player appearance data sourced from Rage Online (https://rageonline.co.uk/).",
+  "extractionNotes": "Includes players listed in the season appearance table, including zero-appearance rows; records appearances by competition.",
+  "competitionColumns": [
+    "League",
+    "FA Cup",
+    "FA Trophy",
+    "Setanta Shield"
+  ],
+  "sourceRows": 41,
+  "includedPlayers": 41,
+  "players": [
+    {
+      "rageOnlinePlayerId": 638,
+      "name": "Stefan Bailey",
+      "starts": 6,
+      "substituteAppearances": 0,
+      "totalAppearances": 6,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 644,
+      "name": "Ashley Barnes",
+      "starts": 4,
+      "substituteAppearances": 4,
+      "totalAppearances": 8,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 1,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 1
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 642,
+      "name": "Declan Benjamin",
+      "starts": 0,
+      "substituteAppearances": 2,
+      "totalAppearances": 2,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 0,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 652,
+      "name": "Michael Blackwood",
+      "starts": 5,
+      "substituteAppearances": 2,
+      "totalAppearances": 7,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 5,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 643,
+      "name": "James Clarke",
+      "starts": 17,
+      "substituteAppearances": 5,
+      "totalAppearances": 22,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 13,
+          "substituteAppearances": 5
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 641,
+      "name": "Patrick Collins",
+      "starts": 2,
+      "substituteAppearances": 0,
+      "totalAppearances": 2,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 616,
+      "name": "Michael Corcoran",
+      "starts": 17,
+      "substituteAppearances": 2,
+      "totalAppearances": 19,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 15,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 605,
+      "name": "Matt Day",
+      "starts": 39,
+      "substituteAppearances": 4,
+      "totalAppearances": 43,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 36,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 604,
+      "name": "Robert Duffy",
+      "starts": 17,
+      "substituteAppearances": 7,
+      "totalAppearances": 24,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 14,
+          "substituteAppearances": 6
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 639,
+      "name": "Alex Fisher",
+      "starts": 1,
+      "substituteAppearances": 13,
+      "totalAppearances": 14,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 1,
+          "substituteAppearances": 9
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 619,
+      "name": "Luke Foster",
+      "starts": 36,
+      "substituteAppearances": 2,
+      "totalAppearances": 38,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 29,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 94,
+      "name": "Phil Gilchrist",
+      "starts": 3,
+      "substituteAppearances": 0,
+      "totalAppearances": 3,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 632,
+      "name": "Arthur Gnohere",
+      "starts": 7,
+      "substituteAppearances": 1,
+      "totalAppearances": 8,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 7,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 645,
+      "name": "Matthew Green",
+      "starts": 17,
+      "substituteAppearances": 4,
+      "totalAppearances": 21,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 16,
+          "substituteAppearances": 4
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 346,
+      "name": "Jamie Hand",
+      "starts": 13,
+      "substituteAppearances": 0,
+      "totalAppearances": 13,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 13,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 650,
+      "name": "Michael Howard",
+      "starts": 17,
+      "substituteAppearances": 0,
+      "totalAppearances": 17,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 17,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 602,
+      "name": "Eddie Hutchinson",
+      "starts": 26,
+      "substituteAppearances": 6,
+      "totalAppearances": 32,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 22,
+          "substituteAppearances": 6
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 626,
+      "name": "Alex Jeannin",
+      "starts": 32,
+      "substituteAppearances": 1,
+      "totalAppearances": 33,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 27,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 630,
+      "name": "Joel Ledgister",
+      "starts": 9,
+      "substituteAppearances": 4,
+      "totalAppearances": 13,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 6,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 649,
+      "name": "Craig McAllister",
+      "starts": 9,
+      "substituteAppearances": 8,
+      "totalAppearances": 17,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 9,
+          "substituteAppearances": 8
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 648,
+      "name": "Adam Murray",
+      "starts": 21,
+      "substituteAppearances": 0,
+      "totalAppearances": 21,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 21,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 600,
+      "name": "Eddie Odhiambo-Anaclet",
+      "starts": 31,
+      "substituteAppearances": 2,
+      "totalAppearances": 33,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 30,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 372,
+      "name": "Yemi Odubade",
+      "starts": 33,
+      "substituteAppearances": 15,
+      "totalAppearances": 48,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 28,
+          "substituteAppearances": 13
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 3,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 601,
+      "name": "Carl Pettefer",
+      "starts": 19,
+      "substituteAppearances": 9,
+      "totalAppearances": 28,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 15,
+          "substituteAppearances": 8
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 330,
+      "name": "Barry Quinn",
+      "starts": 49,
+      "substituteAppearances": 0,
+      "totalAppearances": 49,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 42,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 635,
+      "name": "Jordan Rhodes",
+      "starts": 4,
+      "substituteAppearances": 1,
+      "totalAppearances": 5,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 3,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 651,
+      "name": "Justin Richards",
+      "starts": 10,
+      "substituteAppearances": 5,
+      "totalAppearances": 15,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 10,
+          "substituteAppearances": 5
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 606,
+      "name": "Marvin Robinson",
+      "starts": 2,
+      "substituteAppearances": 7,
+      "totalAppearances": 9,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 2,
+          "substituteAppearances": 7
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 612,
+      "name": "Daniel Rose",
+      "starts": 6,
+      "substituteAppearances": 16,
+      "totalAppearances": 22,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 4,
+          "substituteAppearances": 15
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 653,
+      "name": "Ryan Semple",
+      "starts": 0,
+      "substituteAppearances": 1,
+      "totalAppearances": 1,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 633,
+      "name": "Paul Shaw",
+      "starts": 9,
+      "substituteAppearances": 0,
+      "totalAppearances": 9,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 9,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 640,
+      "name": "Kieron St Aimee",
+      "starts": 3,
+      "substituteAppearances": 0,
+      "totalAppearances": 3,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 631,
+      "name": "Michael Standing",
+      "starts": 3,
+      "substituteAppearances": 4,
+      "totalAppearances": 7,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 3,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 344,
+      "name": "Chris Tardif",
+      "starts": 1,
+      "substituteAppearances": 1,
+      "totalAppearances": 2,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 647,
+      "name": "Matt Taylor",
+      "starts": 0,
+      "substituteAppearances": 4,
+      "totalAppearances": 4,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 0,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 1
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 629,
+      "name": "Phil Trainer",
+      "starts": 47,
+      "substituteAppearances": 0,
+      "totalAppearances": 47,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 41,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 358,
+      "name": "Billy Turley",
+      "starts": 50,
+      "substituteAppearances": 0,
+      "totalAppearances": 50,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 45,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 625,
+      "name": "Gary Twigg",
+      "starts": 8,
+      "substituteAppearances": 6,
+      "totalAppearances": 14,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 5,
+          "substituteAppearances": 5
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 646,
+      "name": "Sam Warrell",
+      "starts": 2,
+      "substituteAppearances": 0,
+      "totalAppearances": 2,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 381,
+      "name": "Ben Weedon",
+      "starts": 2,
+      "substituteAppearances": 2,
+      "totalAppearances": 4,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 362,
+      "name": "Chris Willmott",
+      "starts": 6,
+      "substituteAppearances": 2,
+      "totalAppearances": 8,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 5,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Setanta Shield",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    }
+  ]
+}

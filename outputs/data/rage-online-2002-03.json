@@ -2,9 +2,9 @@
   "season": "2002/03",
   "source": "Rage Online",
   "sourceUrl": "https://rageonline.co.uk/mainpage/season/41",
-  "importedAt": "2026-11-12T18:21:23.545Z",
+  "importedAt": "2026-11-12T23:07:23.580057+00:00",
   "attribution": "Player appearance data sourced from Rage Online (https://rageonline.co.uk/).",
-  "extractionNotes": "Includes every player listed in the season appearance table, including zero-appearance rows. Starts and substitute appearances are recorded separately for every competition shown by Rage Online.",
+  "extractionNotes": "Includes players listed in the season appearance table, including zero-appearance rows; records appearances by competition.",
   "competitionColumns": [
     "FA Cup",
     "League",

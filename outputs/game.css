@@ -2,7 +2,7 @@
 :root {
             --ink: #f5f1e8;
             --muted: #9d9b94;
-            --lime: #d3f36b;
+            --lime: #ffdd00;
             --red: #f27764;
             --panel: #171a17;
             --line: #33372f;
@@ -136,7 +136,7 @@
 
         #newgame:hover {
             filter: brightness(1.08);
-            box-shadow: 0 4px 14px #d3f36b38;
+            box-shadow: 0 4px 14px #ffdd0038;
             transform: translateY(-1px);
         }
 
@@ -744,7 +744,7 @@
 .name-form label { display: block; margin: 0 0 7px 2px; color: var(--muted); font: 10px 'DM Mono', monospace; letter-spacing: .12em; }
 .name-row { display: flex; gap: 8px; }
 .name-row input { min-width: 0; flex: 1; background: #10120f; border: 1px solid #454b3d; border-radius: 3px; color: var(--ink); padding: 11px 12px; font: 13px 'DM Sans', sans-serif; outline: 0; }
-.name-row input:focus { border-color: var(--lime); box-shadow: 0 0 0 2px #d3f36b22; }
+.name-row input:focus { border-color: var(--lime); box-shadow: 0 0 0 2px #ffdd0022; }
 .name-row input::placeholder { color: #77796f; }
 .name-row .primary { white-space: nowrap; padding: 10px 13px; }
 .name-row .primary:disabled { opacity: .45; cursor: not-allowed; }
@@ -915,4 +915,90 @@
 }
 @media (min-width: 701px) {
     .center .challenge { bottom: 135px; }
+}
+
+/* Rules help button and modal */
+.rules-row {
+    margin: -11px 0 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+.rules-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 36px;
+    padding: 0 13px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: #171a17;
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color .16s ease, background .16s ease, transform .16s ease;
+}
+.rules-trigger span { color: var(--lime); font-size: 16px; line-height: 1; }
+.rules-trigger:hover { border-color: var(--lime); background: #20251b; transform: translateY(-1px); }
+.rules-trigger:focus-visible, .rules-close:focus-visible, .rules-done:focus-visible {
+    outline: 2px solid var(--lime);
+    outline-offset: 3px;
+}
+.rules-overlay[hidden] { display: none; }
+.rules-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: rgb(4 6 4 / 78%);
+    backdrop-filter: blur(5px);
+}
+.rules-dialog {
+    position: relative;
+    width: min(560px, 100%);
+    max-height: min(82vh, 760px);
+    overflow-y: auto;
+    padding: 28px;
+    border: 1px solid #4b5440;
+    border-radius: 10px;
+    background: #171a17;
+    color: var(--ink);
+    box-shadow: 0 24px 80px rgb(0 0 0 / 55%);
+}
+.rules-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--muted);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+.rules-close:hover { border-color: var(--lime); color: var(--ink); }
+.rules-dialog .eyebrow { color: var(--lime); font-size: 10px; letter-spacing: .16em; }
+.rules-dialog h2 { margin: 8px 40px 18px 0; font-size: 28px; }
+.rules-list { margin: 0; padding-left: 22px; color: var(--muted); line-height: 1.55; }
+.rules-list li { padding-left: 4px; margin: 0 0 12px; }
+.rules-list li::marker { color: var(--lime); font-weight: 700; }
+.rules-levels { margin-top: 20px; padding-top: 17px; border-top: 1px solid var(--line); }
+.rules-levels h3 { margin: 0 0 10px; font-size: 15px; }
+.rules-levels ul { list-style: none; margin: 0; padding: 0; }
+.rules-levels li { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-top: 1px solid rgb(255 255 255 / 6%); }
+.rules-levels li strong { white-space: nowrap; }
+.rules-levels li span { color: var(--muted); text-align: right; }
+.rules-done { width: 100%; margin-top: 20px; }
+@media (max-width: 600px) {
+    .rules-row { margin: 0 0 10px; }
+    .rules-dialog { padding: 24px 20px; }
+    .rules-dialog h2 { font-size: 24px; }
+    .rules-levels li { flex-direction: column; gap: 4px; }
+    .rules-levels li span { text-align: left; }
 }
