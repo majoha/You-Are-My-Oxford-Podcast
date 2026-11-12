@@ -143,7 +143,15 @@
         function findMatches(value) {
             const query = normalize(value);
             if (query.length < 2) return [];
-            return players.filter(player => !state.used.has(player.id)).map(player => {
+            const currentNames = new Set(players.map(player => normalize(player.name)));
+            const alreadyNamed = new Set(state.history.map(item => normalize(item.name)));
+            const candidates = [
+                ...players.filter(player => !state.used.has(player.id)).map(player => ({ ...player, validForSeason: true })),
+                ...(state.yourJoker ? state.wrongPickCandidates
+                    .filter(name => !currentNames.has(normalize(name)) && !alreadyNamed.has(normalize(name)))
+                    .map(name => ({ name, id: null, pos: '', validForSeason: false })) : [])
+            ];
+            return candidates.map(player => {
                 const full = normalize(player.name);
                 const tokens = player.name.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map(normalize);
                 const distance = Math.min(editDistance(query, full), ...tokens.map(token => editDistance(query, token)));
@@ -152,10 +160,10 @@
                 else if (full.includes(query) || tokens.some(token => token.startsWith(query))) { rank = 1; kind = 'partial'; }
                 else if (query.length >= 3 && distance <= Math.max(1, Math.floor(query.length * .25))) { rank = 2 + distance; }
                 return { player, rank, kind, distance };
-            }).filter(item => Number.isFinite(item.rank)).sort((a, b) => a.rank - b.rank || a.player.name.localeCompare(b.player.name)).slice(0, 5);
+            }).filter(item => Number.isFinite(item.rank)).sort((a, b) => a.rank - b.rank || Number(b.player.validForSeason) - Number(a.player.validForSeason) || a.player.name.localeCompare(b.player.name)).slice(0, 5);
         }
         function confidentMatch(value) {
-            const query = normalize(value), matches = findMatches(value);
+            const query = normalize(value), matches = findMatches(value).filter(item => item.player.validForSeason);
             if (!matches.length) return null;
             if (matches[0].kind === 'exact') return matches[0].player;
             if (matches[0].kind === 'partial') return matches.length === 1 || matches[1].rank > matches[0].rank ? matches[0].player : null;
@@ -166,15 +174,27 @@
         function renderSuggestions() {
             const input = $('nameInput'), query = input.value.trim(), box = $('suggestions');
             input.removeAttribute('data-player-id');
+            input.removeAttribute('data-player-valid');
             if (query.length < 2 || state.turn !== 'you' || state.over) { box.hidden = true; box.innerHTML = ''; return; }
             const matches = findMatches(query);
             if (!matches.length) { box.innerHTML = '<div class="no-suggestions">No close match. Your name will be checked as entered.</div>'; box.hidden = false; return; }
-            box.innerHTML = matches.map(({ player, kind }) => `<button type="button" class="suggestion" role="option" data-id="${player.id}"><span>${escapeHtml(player.name)}</span><small>${kind === 'fuzzy' ? 'Possible spelling match' : 'Season squad player'}</small></button>`).join('');
+            box.innerHTML = matches.map(({ player, kind }) => {
+                const status = player.validForSeason ? (kind === 'fuzzy' ? 'Possible spelling match' : 'Season squad player') : 'Not in this season';
+                return `<button type="button" class="suggestion" role="option" data-id="${player.id ?? ''}" data-valid="${player.validForSeason}"><span>${escapeHtml(player.name)}</span><small class="${player.validForSeason ? '' : 'out-of-season'}">${status}</small></button>`;
+            }).join('');
             box.hidden = false;
             box.querySelectorAll('.suggestion').forEach(button => button.addEventListener('click', () => {
-                const player = players.find(item => item.id === Number(button.dataset.id));
-                input.value = player.name; input.dataset.playerId = String(player.id); box.hidden = true;
-                $('entryHint').textContent = `${player.name} selected. Press “${$('submitName').textContent.replace(' ↗', '')}” to confirm.`; input.focus();
+                const isValid = button.dataset.valid === 'true';
+                const player = isValid ? players.find(item => item.id === Number(button.dataset.id)) : null;
+                const name = button.querySelector('span').textContent;
+                input.value = name;
+                input.dataset.playerValid = String(isValid);
+                if (player) input.dataset.playerId = String(player.id);
+                box.hidden = true;
+                $('entryHint').textContent = isValid
+                    ? `${name} selected. Press “${$('submitName').textContent.replace(' ↗', '')}” to confirm.`
+                    : `${name} is from another season, so it will count as an incorrect pick.`;
+                input.focus();
             }));
         }
         function renderHistory() {
@@ -200,6 +220,7 @@
             $('aiJoker').textContent = 'Secret player'; $('aiJoker').classList.add('hidden'); $('yourJoker').textContent = 'Choose below';
             $('prompt').textContent = 'Choosing a season…'; $('subtext').textContent = 'Getting that season’s player list ready.';
             $('notice').textContent = ''; $('nameInput').value = ''; $('nameInput').placeholder = 'Type a player name…'; $('nameInput').dataset.playerId = '';
+            $('nameInput').removeAttribute('data-player-valid');
             $('nameLabel').textContent = 'CHOOSE YOUR JOKER'; $('submitName').textContent = 'Name joker ↗';
             $('suggestions').hidden = true; $('suggestions').innerHTML = ''; $('challenge').disabled = true; $('nameInput').disabled = true; $('submitName').disabled = true; renderHistory();
             try {
@@ -221,9 +242,11 @@
             event.preventDefault(); if (state.over || state.turn !== 'you') return;
             const input = $('nameInput'), typed = input.value.trim();
             if (!typed) { $('entryHint').textContent = 'Type a player name first.'; input.focus(); return; }
+            const selectedFromOtherSeason = input.dataset.playerValid === 'false';
+            const knownOtherSeason = state.wrongPickCandidates.find(name => normalize(name) === normalize(typed));
             const selectedId = input.dataset.playerId ? Number(input.dataset.playerId) : NaN;
             const chosen = Number.isFinite(selectedId) ? players.find(player => player.id === selectedId) : null;
-            const matched = chosen || confidentMatch(typed);
+            const matched = chosen || (selectedFromOtherSeason || knownOtherSeason ? null : confidentMatch(typed));
             const alreadyUsed = players.find(player => state.used.has(player.id) && normalize(player.name) === normalize(typed));
             if (alreadyUsed) { $('entryHint').textContent = `${alreadyUsed.name} has already been named. Choose someone else.`; input.select(); return; }
             if (!state.yourJoker) {
@@ -235,7 +258,7 @@
                 $('nameInput').value = ''; $('nameInput').dataset.playerId = ''; $('nameLabel').textContent = 'NAME A PLAYER'; $('submitName').textContent = 'Name player ↗';
                 $('entryHint').textContent = 'Typos are matched to the closest roster name when clear.'; $('suggestions').hidden = true; $('challenge').disabled = true; return;
             }
-            const player = matched || { name: typed, id: -1, pos: '' };
+            const player = matched || { name: knownOtherSeason || typed, id: -1, pos: '' };
             if (player.id === state.aiJoker.id) { addHistory(player, 'you', true); end(false, `You picked the computer’s joker: ${player.name}. A joker pick ends the game immediately.`); return; }
             if (player.id >= 0 && state.used.has(player.id)) { $('entryHint').textContent = `${player.name} has already been named. Choose someone else.`; input.select(); return; }
             const corrected = matched && normalize(typed) !== normalize(matched.name);
