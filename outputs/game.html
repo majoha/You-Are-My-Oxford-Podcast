@@ -174,26 +174,19 @@
         function renderSuggestions() {
             const input = $('nameInput'), query = input.value.trim(), box = $('suggestions');
             input.removeAttribute('data-player-id');
-            input.removeAttribute('data-player-valid');
             if (query.length < 2 || state.turn !== 'you' || state.over) { box.hidden = true; box.innerHTML = ''; return; }
             const matches = findMatches(query);
             if (!matches.length) { box.innerHTML = '<div class="no-suggestions">No close match. Your name will be checked as entered.</div>'; box.hidden = false; return; }
-            box.innerHTML = matches.map(({ player, kind }) => {
-                const status = player.validForSeason ? (kind === 'fuzzy' ? 'Possible spelling match' : 'Season squad player') : 'Not in this season';
-                return `<button type="button" class="suggestion" role="option" data-id="${player.id ?? ''}" data-valid="${player.validForSeason}"><span>${escapeHtml(player.name)}</span><small class="${player.validForSeason ? '' : 'out-of-season'}">${status}</small></button>`;
-            }).join('');
+            box.innerHTML = matches.map(({ player }) => `<button type="button" class="suggestion" role="option" data-id="${player.id ?? ''}"><span>${escapeHtml(player.name)}</span></button>`).join('');
             box.hidden = false;
             box.querySelectorAll('.suggestion').forEach(button => button.addEventListener('click', () => {
-                const isValid = button.dataset.valid === 'true';
-                const player = isValid ? players.find(item => item.id === Number(button.dataset.id)) : null;
+                const player = button.dataset.id !== '' ? players.find(item => item.id === Number(button.dataset.id)) : null;
                 const name = button.querySelector('span').textContent;
                 input.value = name;
-                input.dataset.playerValid = String(isValid);
                 if (player) input.dataset.playerId = String(player.id);
+                else input.dataset.playerId = '';
                 box.hidden = true;
-                $('entryHint').textContent = isValid
-                    ? `${name} selected. Press “${$('submitName').textContent.replace(' ↗', '')}” to confirm.`
-                    : `${name} is from another season, so it will count as an incorrect pick.`;
+                $('entryHint').textContent = `${name} selected. Press “${$('submitName').textContent.replace(' ↗', '')}” to confirm.`;
                 input.focus();
             }));
         }
@@ -220,7 +213,6 @@
             $('aiJoker').textContent = 'Secret player'; $('aiJoker').classList.add('hidden'); $('yourJoker').textContent = 'Choose below';
             $('prompt').textContent = 'Choosing a season…'; $('subtext').textContent = 'Getting that season’s player list ready.';
             $('notice').textContent = ''; $('nameInput').value = ''; $('nameInput').placeholder = 'Type a player name…'; $('nameInput').dataset.playerId = '';
-            $('nameInput').removeAttribute('data-player-valid');
             $('nameLabel').textContent = 'CHOOSE YOUR JOKER'; $('submitName').textContent = 'Name joker ↗';
             $('suggestions').hidden = true; $('suggestions').innerHTML = ''; $('challenge').disabled = true; $('nameInput').disabled = true; $('submitName').disabled = true; renderHistory();
             try {
@@ -242,11 +234,10 @@
             event.preventDefault(); if (state.over || state.turn !== 'you') return;
             const input = $('nameInput'), typed = input.value.trim();
             if (!typed) { $('entryHint').textContent = 'Type a player name first.'; input.focus(); return; }
-            const selectedFromOtherSeason = input.dataset.playerValid === 'false';
             const knownOtherSeason = state.wrongPickCandidates.find(name => normalize(name) === normalize(typed));
             const selectedId = input.dataset.playerId ? Number(input.dataset.playerId) : NaN;
             const chosen = Number.isFinite(selectedId) ? players.find(player => player.id === selectedId) : null;
-            const matched = chosen || (selectedFromOtherSeason || knownOtherSeason ? null : confidentMatch(typed));
+            const matched = chosen || (knownOtherSeason ? null : confidentMatch(typed));
             const alreadyUsed = players.find(player => state.used.has(player.id) && normalize(player.name) === normalize(typed));
             if (alreadyUsed) { $('entryHint').textContent = `${alreadyUsed.name} has already been named. Choose someone else.`; input.select(); return; }
             if (!state.yourJoker) {

@@ -755,7 +755,6 @@
 .suggestion { display: flex; width: 100%; justify-content: space-between; gap: 12px; padding: 9px 10px; border: 0; border-radius: 2px; color: var(--ink); background: transparent; text-align: left; cursor: pointer; font: 12px 'DM Sans', sans-serif; }
 .suggestion:hover, .suggestion:focus-visible { background: #2c3126; outline: 0; }
 .suggestion small { color: var(--muted); font: 9px 'DM Mono', monospace; white-space: nowrap; }
-.suggestion small.out-of-season { color: var(--red); }
 .no-suggestions { padding: 10px; color: var(--muted); font-size: 11px; }
 .history-heading { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
 .history-caption { margin-top: 4px; color: var(--muted); font-size: 11px; }
