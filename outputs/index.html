@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10120f">
+<title>Yellow Card | Oxford United player challenge</title>
+<link rel="stylesheet" href="./landing.css">
+</head>
+<body>
+<main class="stage" aria-label="Yellow Card game introduction">
+<video class="film" autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="./assets/JNG%20sting.mp4" type="video/mp4"></video>
+<div class="shade"></div><div class="grain"></div>
+<header class="mast"><div class="brand">YELLOW<i>·</i>CARD</div><div class="mast-actions"><button type="button" class="sound-toggle" id="soundToggle" aria-pressed="false">♫ SOUND OFF</button><div class="mast-note">AN OXFORD UNITED GAME <b>●</b></div></div></header>
+<section class="copy"><p class="desc">One season. A squad full of names. How far can your memory take you?</p></section>
+<a class="prompt" id="continue" href="./game.html"><span class="key" aria-hidden="true">↵</span><span class="prompt-text">Press spacebar to continue<small>or click here to kick off</small></span></a>
+<div class="index">01 <b>—</b> INTRO</div>
+</main>
+<script>
+const continueLink=document.getElementById('continue');
+document.addEventListener('keydown',event=>{if(event.code==='Space'&&!event.repeat){event.preventDefault();window.location.href=continueLink.href}});
+const introVideo=document.querySelector('.film');const soundToggle=document.getElementById('soundToggle');introVideo.play().catch(()=>{});soundToggle.addEventListener('click',async()=>{introVideo.muted=!introVideo.muted;if(!introVideo.muted){try{await introVideo.play()}catch{introVideo.muted=true}}const enabled=!introVideo.muted;soundToggle.textContent=enabled?'♫ SOUND ON':'♫ SOUND OFF';soundToggle.setAttribute('aria-pressed',String(enabled))});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
