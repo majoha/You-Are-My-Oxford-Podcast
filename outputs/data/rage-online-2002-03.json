@@ -1,0 +1,775 @@
+{
+  "season": "2002/03",
+  "source": "Rage Online",
+  "sourceUrl": "https://rageonline.co.uk/mainpage/season/41",
+  "importedAt": "2026-11-12T17:08:47Z",
+  "attribution": "Player appearance data sourced from Rage Online (https://rageonline.co.uk/).",
+  "extractionNotes": "Includes players with at least one appearance in any listed competition. Competition cells record starts and substitute appearances (shown in parentheses on the source page). Zero-appearance rows are excluded.",
+  "competitionColumns": [
+    "FA Cup",
+    "League",
+    "League Cup",
+    "Football League Trophy"
+  ],
+  "sourceRows": 28,
+  "includedPlayers": 27,
+  "excludedZeroAppearanceRows": 1,
+  "players": [
+    {
+      "name": "Steve Basham",
+      "totalAppearances": 36,
+      "starts": 30,
+      "substituteAppearances": 6,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 25,
+          "substituteAppearances": 6
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Matthew Bound",
+      "totalAppearances": 48,
+      "starts": 48,
+      "substituteAppearances": 0,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 41,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Andy Crosby",
+      "totalAppearances": 53,
+      "starts": 53,
+      "substituteAppearances": 0,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 46,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Christian Edwards",
+      "totalAppearances": 6,
+      "starts": 5,
+      "substituteAppearances": 1,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 5,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Dominic Foley",
+      "totalAppearances": 6,
+      "starts": 4,
+      "substituteAppearances": 2,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 4,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Bobby Ford",
+      "totalAppearances": 41,
+      "starts": 35,
+      "substituteAppearances": 6,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 31,
+          "substituteAppearances": 6
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Gavin Gordon",
+      "totalAppearances": 7,
+      "starts": 3,
+      "substituteAppearances": 4,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 3,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Chris Hackett",
+      "totalAppearances": 14,
+      "starts": 2,
+      "substituteAppearances": 12,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 1,
+          "substituteAppearances": 11
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "James Hunt",
+      "totalAppearances": 44,
+      "starts": 44,
+      "substituteAppearances": 0,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 39,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Roy Hunter",
+      "totalAppearances": 19,
+      "starts": 14,
+      "substituteAppearances": 5,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 12,
+          "substituteAppearances": 5
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Alan Judge",
+      "totalAppearances": 1,
+      "starts": 1,
+      "substituteAppearances": 0,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Jefferson Louis",
+      "totalAppearances": 39,
+      "starts": 15,
+      "substituteAppearances": 24,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 1,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "league",
+          "starts": 12,
+          "substituteAppearances": 21
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Paul McCarthy",
+      "totalAppearances": 6,
+      "starts": 6,
+      "substituteAppearances": 0,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 6,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Scott McNiven",
+      "totalAppearances": 50,
+      "starts": 50,
+      "substituteAppearances": 0,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 44,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "David Oldfield",
+      "totalAppearances": 33,
+      "starts": 23,
+      "substituteAppearances": 10,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 19,
+          "substituteAppearances": 9
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 1
+        }
+      ]
+    },
+    {
+      "name": "Manny Omoyinmi",
+      "totalAppearances": 20,
+      "starts": 4,
+      "substituteAppearances": 16,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "league",
+          "starts": 4,
+          "substituteAppearances": 13
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Paul Powell",
+      "totalAppearances": 17,
+      "starts": 5,
+      "substituteAppearances": 12,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 4,
+          "substituteAppearances": 10
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Sam Ricketts",
+      "totalAppearances": 2,
+      "starts": 0,
+      "substituteAppearances": 2,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 0,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Matthew Robinson",
+      "totalAppearances": 49,
+      "starts": 48,
+      "substituteAppearances": 1,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 42,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 1
+        }
+      ]
+    },
+    {
+      "name": "Abdou Sall",
+      "totalAppearances": 2,
+      "starts": 0,
+      "substituteAppearances": 2,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "league",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "David Savage",
+      "totalAppearances": 50,
+      "starts": 50,
+      "substituteAppearances": 0,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 43,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Andy Scott",
+      "totalAppearances": 41,
+      "starts": 31,
+      "substituteAppearances": 10,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "league",
+          "starts": 29,
+          "substituteAppearances": 9
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Lee Steele",
+      "totalAppearances": 11,
+      "starts": 3,
+      "substituteAppearances": 8,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "league",
+          "starts": 3,
+          "substituteAppearances": 7
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Adi Viveash",
+      "totalAppearances": 15,
+      "starts": 15,
+      "substituteAppearances": 0,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 11,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "David Waterman",
+      "totalAppearances": 33,
+      "starts": 31,
+      "substituteAppearances": 2,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 27,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "name": "Dean Whitehead",
+      "totalAppearances": 22,
+      "starts": 11,
+      "substituteAppearances": 11,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "league",
+          "starts": 9,
+          "substituteAppearances": 9
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 0,
+          "substituteAppearances": 1
+        }
+      ]
+    },
+    {
+      "name": "Andy Woodman",
+      "totalAppearances": 52,
+      "starts": 52,
+      "substituteAppearances": 0,
+      "competitions": [
+        {
+          "competition": "faCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "league",
+          "starts": 45,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "leagueCup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "footballLeagueTrophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    }
+  ]
+}

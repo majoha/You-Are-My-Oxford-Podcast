@@ -89,16 +89,28 @@
         </div>
     </div>
     <script>
-        const players = [['Peter Rhoades-Brown', 'MID'], ['Jim Magilton', 'MID'], ['John Aldridge', 'FWD'], ['Dean Saunders', 'FWD'], ['Ray Houghton', 'MID'], ['Andy Thomas', 'FWD'], ['Billy Whitehurst', 'FWD'], ['Paul Simpson', 'FWD'], ['Derek Brazil', 'MID'], ['Mickey Lewis', 'MID'], ['Chris Allen', 'DEF'], ['Mark Jones', 'DEF'], ['Bobby McDonald', 'DEF'], ['Brian McDermott', 'MID'], ['Les Robinson', 'DEF'], ['Steve Hardwick', 'GK'], ['Ron Atkinson', 'FWD'], ['Chris Wilder', 'DEF'], ['Matt Elliott', 'DEF'], ['Jamie Brooks', 'MID'], ['Paul Moody', 'FWD'], ['Simon Marsh', 'FWD'], ['Andy Crosby', 'DEF'], ['Phil Whitehead', 'GK'], ['Joey Beauchamp', 'FWD'], ['Paul Powell', 'MID'], ['Dave Smith', 'DEF'], ['Graham Rix', 'MID'], ['John Byrne', 'FWD'], ['Ian McGuckin', 'DEF'], ['Phil Gilchrist', 'DEF'], ['Steve Anthrobus', 'FWD'], ['Elliott Jackson', 'FWD'], ['Richard Knight', 'GK'], ['Peter Fear', 'MID'], ['Lee Steele', 'FWD']].map(([name, pos], i) => ({name, pos, id: i}));
-        const seasons = ['1982/83', '1983/84', '1984/85', '1985/86', '1986/87', '1987/88', '1988/89', '1989/90', '1990/91', '1991/92', '1992/93', '1993/94', '1994/95', '1995/96', '1996/97', '1997/98', '1998/99', '1999/00', '2000/01', '2001/02', '2002/03', '2003/04', '2004/05', '2005/06', '2006/07', '2007/08', '2008/09', '2009/10', '2010/11', '2011/12', '2012/13', '2013/14', '2014/15', '2015/16', '2016/17', '2017/18', '2018/19', '2019/20', '2020/21', '2021/22', '2022/23', '2023/24', '2024/25'];
-        const cfg = {James: {miss: 4, challenge: 5}, Theo: {miss: 5, challenge: 4}, Matt: {miss: 6, challenge: 3}, Dan: {miss: 7, challenge: 1}};
-        let state = {used: new Set(), history: [], turn: 'you', last: null, started: false, over: false, yourJoker: null, aiJoker: null, season: ''};
+        let players = [];
+        const seasons = ['2002/03'];
+        const seasonFiles = { '2002/03': './data/rage-online-2002-03.json' };
+        const seasonCache = new Map();
+        async function loadSeason(season) {
+            if (seasonCache.has(season)) return seasonCache.get(season);
+            const response = await fetch(seasonFiles[season]);
+            if (!response.ok) throw new Error(`Season data request failed (${response.status}).`);
+            const data = await response.json();
+            if (data.season !== season || !Array.isArray(data.players)) throw new Error('Season data has an unexpected format.');
+            const seasonPlayers = data.players.map((player, id) => ({ ...player, id, pos: '' }));
+            seasonCache.set(season, seasonPlayers);
+            return seasonPlayers;
+        }
+        const cfg = { James: { miss: 4, challenge: 5 }, Theo: { miss: 5, challenge: 4 }, Matt: { miss: 6, challenge: 3 }, Dan: { miss: 7, challenge: 1 } };
+        let state = { used: new Set(), history: [], turn: 'you', last: null, started: false, over: false, yourJoker: null, aiJoker: null, season: '' };
         const $ = id => document.getElementById(id);
         const shuffled = a => [...a].sort(() => Math.random() - .5);
         const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
-        const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'})[char]);
+        const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
         function editDistance(a, b) {
-            const row = Array.from({length: b.length + 1}, (_, i) => i);
+            const row = Array.from({ length: b.length + 1 }, (_, i) => i);
             for (let i = 1; i <= a.length; i++) {
                 let diagonal = row[0]; row[0] = i;
                 for (let j = 1; j <= b.length; j++) {
@@ -115,10 +127,10 @@
                 const tokens = player.name.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean).map(normalize);
                 const distance = Math.min(editDistance(query, full), ...tokens.map(token => editDistance(query, token)));
                 let rank = Infinity, kind = 'fuzzy';
-                if (full === query || tokens.includes(query)) {rank = 0; kind = 'exact';}
-                else if (full.includes(query) || tokens.some(token => token.startsWith(query))) {rank = 1; kind = 'partial';}
-                else if (query.length >= 3 && distance <= Math.max(1, Math.floor(query.length * .25))) {rank = 2 + distance;}
-                return {player, rank, kind, distance};
+                if (full === query || tokens.includes(query)) { rank = 0; kind = 'exact'; }
+                else if (full.includes(query) || tokens.some(token => token.startsWith(query))) { rank = 1; kind = 'partial'; }
+                else if (query.length >= 3 && distance <= Math.max(1, Math.floor(query.length * .25))) { rank = 2 + distance; }
+                return { player, rank, kind, distance };
             }).filter(item => Number.isFinite(item.rank)).sort((a, b) => a.rank - b.rank || a.player.name.localeCompare(b.player.name)).slice(0, 5);
         }
         function confidentMatch(value) {
@@ -133,10 +145,10 @@
         function renderSuggestions() {
             const input = $('nameInput'), query = input.value.trim(), box = $('suggestions');
             input.removeAttribute('data-player-id');
-            if (query.length < 2 || state.turn !== 'you' || state.over) {box.hidden = true; box.innerHTML = ''; return;}
+            if (query.length < 2 || state.turn !== 'you' || state.over) { box.hidden = true; box.innerHTML = ''; return; }
             const matches = findMatches(query);
-            if (!matches.length) {box.innerHTML = '<div class="no-suggestions">No close match. Your name will be checked as entered.</div>'; box.hidden = false; return;}
-            box.innerHTML = matches.map(({player, kind}) => `<button type="button" class="suggestion" role="option" data-id="${player.id}"><span>${escapeHtml(player.name)}</span><small>${kind === 'fuzzy' ? 'Possible spelling match' : player.pos}</small></button>`).join('');
+            if (!matches.length) { box.innerHTML = '<div class="no-suggestions">No close match. Your name will be checked as entered.</div>'; box.hidden = false; return; }
+            box.innerHTML = matches.map(({ player, kind }) => `<button type="button" class="suggestion" role="option" data-id="${player.id}"><span>${escapeHtml(player.name)}</span><small>${kind === 'fuzzy' ? 'Possible spelling match' : 'Season squad player'}</small></button>`).join('');
             box.hidden = false;
             box.querySelectorAll('.suggestion').forEach(button => button.addEventListener('click', () => {
                 const player = players.find(item => item.id === Number(button.dataset.id));
@@ -147,11 +159,11 @@
         function renderHistory() {
             const rack = $('historyRack');
             $('historyCount').textContent = `${state.history.length} pick${state.history.length === 1 ? '' : 's'}`;
-            if (!state.history.length) {rack.innerHTML = '<div class="history-empty">Players named during the match will appear here.</div>'; return;}
+            if (!state.history.length) { rack.innerHTML = '<div class="history-empty">Players named during the match will appear here.</div>'; return; }
             rack.innerHTML = state.history.map(item => `<article class="history-card ${item.by === 'you' ? 'you' : 'computer'} ${item.valid ? '' : 'invalid'}"><div class="history-avatar"><span>OUFC</span></div><div class="history-name">${escapeHtml(item.name)}</div><small>${item.by === 'you' ? 'YOU' : escapeHtml($('level').value.toUpperCase())}${item.valid ? '' : ' · CHECK?'}</small></article>`).join('');
             rack.scrollLeft = rack.scrollWidth;
         }
-        function addHistory(player, by, valid) {state.history.push({name: player.name, by, valid}); renderHistory();}
+        function addHistory(player, by, valid) { state.history.push({ name: player.name, by, valid }); renderHistory(); }
         function setTurn(turn) {
             state.turn = turn;
             $('youSide').classList.toggle('active', turn === 'you'); $('aiSide').classList.toggle('active', turn === 'ai');
@@ -160,26 +172,35 @@
             $('nameInput').disabled = turn !== 'you' || state.over; $('submitName').disabled = turn !== 'you' || state.over;
             $('nameForm').classList.toggle('disabled', turn !== 'you' || state.over);
         }
-        function start() {
-            state = {used: new Set(), history: [], turn: 'you', last: null, started: true, over: false, yourJoker: null, aiJoker: null, season: seasons[Math.floor(Math.random() * seasons.length)]};
-            $('seasonLabel').textContent = `SEASON · ${state.season}`; $('aiName').textContent = $('level').value; $('aiJokerLabel').textContent = $('level').value.toUpperCase();
+        async function start() {
+            const season = seasons[Math.floor(Math.random() * seasons.length)];
+            state = { used: new Set(), history: [], turn: 'you', last: null, started: true, over: false, yourJoker: null, aiJoker: null, season };
+            $('seasonLabel').textContent = `SEASON · ${season}`; $('aiName').textContent = $('level').value; $('aiJokerLabel').textContent = $('level').value.toUpperCase();
             $('aiJoker').textContent = 'Secret player'; $('aiJoker').classList.add('hidden'); $('yourJoker').textContent = 'Choose below';
-            $('prompt').textContent = `${$('level').value} is choosing a joker…`; $('subtext').textContent = 'Type your secret joker below. Suggestions appear after two letters.';
+            $('prompt').textContent = `Loading the ${season} squad…`; $('subtext').textContent = 'Getting the season player list ready.';
             $('notice').textContent = ''; $('nameInput').value = ''; $('nameInput').placeholder = 'Type a player name…'; $('nameInput').dataset.playerId = '';
             $('nameLabel').textContent = 'CHOOSE YOUR JOKER'; $('submitName').textContent = 'Name joker ↗';
-            $('suggestions').hidden = true; $('suggestions').innerHTML = ''; $('challenge').disabled = true; renderHistory(); setTurn('you');
+            $('suggestions').hidden = true; $('suggestions').innerHTML = ''; $('challenge').disabled = true; $('nameInput').disabled = true; $('submitName').disabled = true; renderHistory();
+            try {
+                players = await loadSeason(season);
+            } catch (error) {
+                $('prompt').textContent = 'Season data could not be loaded'; $('subtext').textContent = 'Please check your connection and start a new game to try again.';
+                $('notice').textContent = 'SEASON DATA UNAVAILABLE'; $('entryHint').textContent = error.message; return;
+            }
+            $('prompt').textContent = `${$('level').value} is choosing a joker…`; $('subtext').textContent = 'Type your secret joker below.';
+            $('entryHint').textContent = 'Type at least two letters to see suggestions.'; setTurn('you');
         }
         function submitName(event) {
             event.preventDefault(); if (state.over || state.turn !== 'you') return;
             const input = $('nameInput'), typed = input.value.trim();
-            if (!typed) {$('entryHint').textContent = 'Type a player name first.'; input.focus(); return;}
+            if (!typed) { $('entryHint').textContent = 'Type a player name first.'; input.focus(); return; }
             const selectedId = input.dataset.playerId ? Number(input.dataset.playerId) : NaN;
             const chosen = Number.isFinite(selectedId) ? players.find(player => player.id === selectedId) : null;
             const matched = chosen || confidentMatch(typed);
             const alreadyUsed = players.find(player => state.used.has(player.id) && normalize(player.name) === normalize(typed));
-            if (alreadyUsed) {$('entryHint').textContent = `${alreadyUsed.name} has already been named. Choose someone else.`; input.select(); return;}
+            if (alreadyUsed) { $('entryHint').textContent = `${alreadyUsed.name} has already been named. Choose someone else.`; input.select(); return; }
             if (!state.yourJoker) {
-                if (!matched) {$('entryHint').textContent = 'Choose a squad player from the suggestions for your joker.'; input.focus(); return;}
+                if (!matched) { $('entryHint').textContent = 'Choose a squad player from the suggestions for your joker.'; input.focus(); return; }
                 state.yourJoker = matched; state.aiJoker = shuffled(players.filter(player => player.id !== matched.id))[0]; state.used.add(matched.id);
                 $('yourJoker').textContent = matched.name; $('prompt').textContent = `${matched.name} is your joker.`;
                 $('subtext').textContent = 'Your joker is locked in. Type the first player name below.';
@@ -187,13 +208,13 @@
                 $('nameInput').value = ''; $('nameInput').dataset.playerId = ''; $('nameLabel').textContent = 'NAME A PLAYER'; $('submitName').textContent = 'Name player ↗';
                 $('entryHint').textContent = 'Typos are matched to the closest roster name when clear.'; $('suggestions').hidden = true; $('challenge').disabled = true; return;
             }
-            const player = matched || {name: typed, id: -1, pos: ''};
-            if (player.id === state.aiJoker.id) {addHistory(player, 'you', true); end(false, `You picked the computer’s joker: ${player.name}. A joker pick ends the game immediately.`); return;}
-            if (player.id >= 0 && state.used.has(player.id)) {$('entryHint').textContent = `${player.name} has already been named. Choose someone else.`; input.select(); return;}
+            const player = matched || { name: typed, id: -1, pos: '' };
+            if (player.id === state.aiJoker.id) { addHistory(player, 'you', true); end(false, `You picked the computer’s joker: ${player.name}. A joker pick ends the game immediately.`); return; }
+            if (player.id >= 0 && state.used.has(player.id)) { $('entryHint').textContent = `${player.name} has already been named. Choose someone else.`; input.select(); return; }
             const corrected = matched && normalize(typed) !== normalize(matched.name);
             const valid = Boolean(matched);
             if (valid) state.used.add(player.id);
-            state.last = {player, by: 'you', valid}; addHistory(player, 'you', valid);
+            state.last = { player, by: 'you', valid }; addHistory(player, 'you', valid);
             $('prompt').textContent = `You named ${player.name}.`;
             $('subtext').textContent = valid ? 'The computer is checking your pick…' : 'That name is not in the roster. The computer may challenge it.';
             $('notice').textContent = corrected ? `Matched your spelling to ${player.name}.` : valid ? '' : 'UNMATCHED PICK · CHALLENGEABLE';
@@ -220,15 +241,15 @@
             const available = players.filter(player => !state.used.has(player.id) && player.id !== state.yourJoker.id);
             if (Math.random() < 1 / cfgv.miss) {
                 const invalidNames = ['Peter Crouch', 'David Beckham', 'Wayne Rooney', 'Harry Kane', 'Lionel Messi'];
-                const name = invalidNames[Math.floor(Math.random() * invalidNames.length)], player = {name, id: -1, pos: ''};
-                state.last = {player, by: 'ai', valid: false}; addHistory(player, 'ai', false);
+                const name = invalidNames[Math.floor(Math.random() * invalidNames.length)], player = { name, id: -1, pos: '' };
+                state.last = { player, by: 'ai', valid: false }; addHistory(player, 'ai', false);
                 $('prompt').textContent = `${level} names ${name}.`; $('subtext').textContent = 'Was that player in this season’s Oxford United squad?'; $('notice').textContent = 'COMPUTER PICK · YOUR TURN';
                 setTurn('you'); $('entryHint').textContent = 'You can challenge this pick or name another player.'; renderSuggestions(); return;
             }
-            if (!available.length) {end(true, 'You named every available player without being caught.'); return;}
+            if (!available.length) { end(true, 'You named every available player without being caught.'); return; }
             const player = available[Math.floor(Math.random() * available.length)];
-            if (player.id === state.yourJoker.id) {end(false, `${level} picked your joker, ${player.name}. That ends the game in your favour.`); return;}
-            state.used.add(player.id); state.last = {player, by: 'ai', valid: true}; addHistory(player, 'ai', true);
+            if (player.id === state.yourJoker.id) { end(true, `${level} picked your joker, ${player.name}. That ends the game in your favour.`); return; }
+            state.used.add(player.id); state.last = { player, by: 'ai', valid: true }; addHistory(player, 'ai', true);
             $('prompt').textContent = `${level} names ${player.name}.`; $('subtext').textContent = 'Your turn. Type a player, or challenge the computer’s pick if you think it is wrong.'; $('notice').textContent = 'COMPUTER PICK · YOUR TURN';
             setTurn('you'); $('entryHint').textContent = 'Typos are matched to the closest roster name when clear.'; renderSuggestions();
         }
@@ -245,8 +266,8 @@
         $('nameInput').addEventListener('input', renderSuggestions);
         $('nameForm').addEventListener('submit', submitName);
         $('challenge').addEventListener('click', challenge);
-        $('newgame').onclick = start; $('again').onclick = () => {$('veil').style.display = 'none'; start();};
-        $('level').onchange = () => {if (state.started) start();};
+        $('newgame').onclick = start; $('again').onclick = () => { $('veil').style.display = 'none'; start(); };
+        $('level').onchange = () => { if (state.started) start(); };
         start();
     </script>
 </body>
