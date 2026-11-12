@@ -19,12 +19,17 @@
     </header>
     <main class="wrap">
         <div class="partner-row" aria-label="Podcast and sponsors">
-            <div class="partner-card sponsor-card"><span>SPONSOR</span><img src="./assets/NUTMEG%20Logo.webp"
-                    alt="NUTMEG! sponsor logo"></div>
+            <div class="partner-card sponsor-card"><span>SPONSOR</span><a
+                    href="https://secret-mode-nutmeg.xsolla.site/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit NUTMEG! sponsor website"><img src="./assets/NUTMEG%20Logo.webp"
+                        alt="NUTMEG! sponsor logo"></a></div>
             <div class="partner-card podcast-card"><span>PODCAST</span><img src="./assets/banner%20Yamo%20logo.jpg"
                     alt="You Are My Oxford podcast banner"></div>
-            <div class="partner-card sponsor-card"><span>SPONSOR</span><img
-                    src="./assets/HEnstridge%20logo%20white.webp" alt="Henstridge Construction sponsor logo"></div>
+            <div class="partner-card sponsor-card"><span>SPONSOR</span><a
+                    href="https://henstridgeconstruction.com/" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit Henstridge Construction website"><img
+                        src="./assets/HEnstridge%20logo%20white.webp" alt="Henstridge Construction sponsor logo"></a>
+            </div>
         </div>
         <section class="heading">
             <div class="setup"><label>OPPONENT <select id="level">
@@ -36,7 +41,7 @@
         </section>
         <div class="scoreline">
             <div class="side" id="aiSide">COMPUTER<strong id="aiName">James</strong></div>
-            <div class="season-tag" id="seasonLabel">SEASON · 2023/24</div>
+            <div class="season-tag" id="seasonLabel">SEASON · 2002/03</div>
             <div class="side active" id="youSide">YOU<strong>Player</strong></div>
         </div>
         <section class="game">
@@ -90,7 +95,6 @@
     </div>
     <script>
         let players = [];
-        const seasons = ['2002/03'];
         const seasonFiles = { '2002/03': './data/rage-online-2002-03.json' };
         const seasonCache = new Map();
         async function loadSeason(season) {
@@ -173,7 +177,7 @@
             $('nameForm').classList.toggle('disabled', turn !== 'you' || state.over);
         }
         async function start() {
-            const season = seasons[Math.floor(Math.random() * seasons.length)];
+            const season = '2002/03';
             state = { used: new Set(), history: [], turn: 'you', last: null, started: true, over: false, yourJoker: null, aiJoker: null, season };
             $('seasonLabel').textContent = `SEASON · ${season}`; $('aiName').textContent = $('level').value; $('aiJokerLabel').textContent = $('level').value.toUpperCase();
             $('aiJoker').textContent = 'Secret player'; $('aiJoker').classList.add('hidden'); $('yourJoker').textContent = 'Choose below';
