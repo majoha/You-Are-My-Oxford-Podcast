@@ -96,23 +96,39 @@
     </div>
     <script>
         let players = [];
-        const seasonFiles = { '2002/03': './data/rage-online-2002-03.json' };
-        const seasonCache = new Map();
-        async function loadSeason(season) {
-            if (seasonCache.has(season)) return seasonCache.get(season);
-            const response = await fetch(seasonFiles[season]);
-            if (!response.ok) throw new Error(`Season data request failed (${response.status}).`);
-            const data = await response.json();
-            if (data.season !== season || !Array.isArray(data.players)) throw new Error('Season data has an unexpected format.');
-            const seasonPlayers = data.players.map((player, id) => ({ ...player, id, pos: '' }));
-            seasonCache.set(season, seasonPlayers);
-            return seasonPlayers;
+        const seasonFiles = {
+            '1982/83': './data/rage-online-1982-83.json',
+            '2002/03': './data/rage-online-2002-03.json',
+            '2025/26': './data/rage-online-2025-26.json'
+        };
+        let gameStartRequest = 0;
+        const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        async function loadRandomGameData() {
+            try {
+                const response = await fetch('/api/game/new', { cache: 'no-store' });
+                if (response.ok) {
+                    const data = await response.json();
+                    if (data.season && Array.isArray(data.players) && Array.isArray(data.wrongPickCandidates)) return data;
+                }
+            } catch { /* Use local season files until the API is deployed. */ }
+
+            const datasets = await Promise.all(Object.values(seasonFiles).map(async url => {
+                const response = await fetch(url);
+                if (!response.ok) throw new Error(`Season data request failed (${response.status}).`);
+                return response.json();
+            }));
+            const selected = datasets[Math.floor(Math.random() * datasets.length)];
+            const validPlayers = selected.players.filter(player => player.totalAppearances > 0);
+            const currentNames = new Set(validPlayers.map(player => normalize(player.name)));
+            const wrongPickCandidates = [...new Map(datasets.flatMap(data => data.players)
+                .filter(player => player.totalAppearances > 0 && !currentNames.has(normalize(player.name)))
+                .map(player => [normalize(player.name), player.name])).values()];
+            return { season: selected.season, players: validPlayers, wrongPickCandidates };
         }
         const cfg = { James: { miss: 4, challenge: 5 }, Theo: { miss: 5, challenge: 4 }, Matt: { miss: 6, challenge: 3 }, Dan: { miss: 7, challenge: 1 } };
-        let state = { used: new Set(), history: [], turn: 'you', last: null, started: false, over: false, yourJoker: null, aiJoker: null, season: '' };
+        let state = { used: new Set(), history: [], turn: 'you', last: null, started: false, over: false, yourJoker: null, aiJoker: null, season: '', wrongPickCandidates: [] };
         const $ = id => document.getElementById(id);
         const shuffled = a => [...a].sort(() => Math.random() - .5);
-        const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]/g, '');
         const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
         function editDistance(a, b) {
             const row = Array.from({ length: b.length + 1 }, (_, i) => i);
@@ -178,20 +194,26 @@
             $('nameForm').classList.toggle('disabled', turn !== 'you' || state.over);
         }
         async function start() {
-            const season = '2002/03';
-            state = { used: new Set(), history: [], turn: 'you', last: null, started: true, over: false, yourJoker: null, aiJoker: null, season };
-            $('seasonLabel').textContent = `SEASON · ${season}`; $('aiName').textContent = $('level').value; $('aiJokerLabel').textContent = $('level').value.toUpperCase();
+            const requestId = ++gameStartRequest;
+            state = { used: new Set(), history: [], turn: 'you', last: null, started: true, over: false, yourJoker: null, aiJoker: null, season: '', wrongPickCandidates: [] };
+            $('seasonLabel').textContent = 'SEASON · DRAWING'; $('aiName').textContent = $('level').value; $('aiJokerLabel').textContent = $('level').value.toUpperCase();
             $('aiJoker').textContent = 'Secret player'; $('aiJoker').classList.add('hidden'); $('yourJoker').textContent = 'Choose below';
-            $('prompt').textContent = `Loading the ${season} squad…`; $('subtext').textContent = 'Getting the season player list ready.';
+            $('prompt').textContent = 'Choosing a season…'; $('subtext').textContent = 'Getting that season’s player list ready.';
             $('notice').textContent = ''; $('nameInput').value = ''; $('nameInput').placeholder = 'Type a player name…'; $('nameInput').dataset.playerId = '';
             $('nameLabel').textContent = 'CHOOSE YOUR JOKER'; $('submitName').textContent = 'Name joker ↗';
             $('suggestions').hidden = true; $('suggestions').innerHTML = ''; $('challenge').disabled = true; $('nameInput').disabled = true; $('submitName').disabled = true; renderHistory();
             try {
-                players = await loadSeason(season);
+                const gameData = await loadRandomGameData();
+                if (requestId !== gameStartRequest) return;
+                state.season = gameData.season;
+                state.wrongPickCandidates = gameData.wrongPickCandidates;
+                players = gameData.players.map((player, id) => ({ ...player, id, pos: '' }));
             } catch (error) {
+                if (requestId !== gameStartRequest) return;
                 $('prompt').textContent = 'Season data could not be loaded'; $('subtext').textContent = 'Please check your connection and start a new game to try again.';
                 $('notice').textContent = 'SEASON DATA UNAVAILABLE'; $('entryHint').textContent = error.message; return;
             }
+            $('seasonLabel').textContent = `SEASON · ${state.season}`;
             $('prompt').textContent = `${$('level').value} is choosing a joker…`; $('subtext').textContent = 'Type your secret joker below.';
             $('entryHint').textContent = 'Type at least two letters to see suggestions.'; setTurn('you');
         }
@@ -243,9 +265,11 @@
                 }
                 await new Promise(resolve => setTimeout(resolve, 1200));
             }
-            const available = players.filter(player => !state.used.has(player.id) && player.id !== state.yourJoker.id);
+            const available = players.filter(player => player.id === state.yourJoker.id || !state.used.has(player.id));
             if (Math.random() < 1 / cfgv.miss) {
-                const invalidNames = ['Peter Crouch', 'David Beckham', 'Wayne Rooney', 'Harry Kane', 'Lionel Messi'];
+                const alreadyNamed = new Set(state.history.map(item => normalize(item.name)));
+                const fromOtherSeasons = state.wrongPickCandidates.filter(name => !alreadyNamed.has(normalize(name)));
+                const invalidNames = fromOtherSeasons.length ? fromOtherSeasons : ['Peter Crouch', 'David Beckham', 'Wayne Rooney', 'Harry Kane', 'Lionel Messi'];
                 const name = invalidNames[Math.floor(Math.random() * invalidNames.length)], player = { name, id: -1, pos: '' };
                 state.last = { player, by: 'ai', valid: false }; addHistory(player, 'ai', false);
                 $('prompt').textContent = `${level} names ${name}.`; $('subtext').textContent = 'Was that player in this season’s Oxford United squad?'; $('notice').textContent = 'COMPUTER PICK · YOUR TURN';

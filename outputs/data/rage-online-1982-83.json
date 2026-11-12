@@ -1,0 +1,685 @@
+{
+  "season": "1982/83",
+  "source": "Rage Online",
+  "sourceUrl": "https://rageonline.co.uk/mainpage/season/24",
+  "importedAt": "2026-11-12T18:21:23.341Z",
+  "attribution": "Player appearance data sourced from Rage Online (https://rageonline.co.uk/).",
+  "extractionNotes": "Includes every player listed in the season appearance table, including zero-appearance rows. Starts and substitute appearances are recorded separately for every competition shown by Rage Online.",
+  "competitionColumns": [
+    "League",
+    "FA Cup",
+    "Football League Trophy",
+    "League Cup"
+  ],
+  "sourceRows": 23,
+  "includedPlayers": 23,
+  "players": [
+    {
+      "rageOnlinePlayerId": 10,
+      "name": "Brian Attley",
+      "starts": 5,
+      "substituteAppearances": 0,
+      "totalAppearances": 5,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 5,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 16,
+      "name": "Gary Barnett",
+      "starts": 25,
+      "substituteAppearances": 4,
+      "totalAppearances": 29,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 18,
+          "substituteAppearances": 4
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 3,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 21,
+      "name": "Steve Biggins",
+      "starts": 11,
+      "substituteAppearances": 3,
+      "totalAppearances": 14,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 8,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 1,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 2,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 27,
+      "name": "Gary Briggs",
+      "starts": 45,
+      "substituteAppearances": 0,
+      "totalAppearances": 45,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 37,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 29,
+      "name": "Kevin Brock",
+      "starts": 44,
+      "substituteAppearances": 3,
+      "totalAppearances": 47,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 34,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 34,
+      "name": "Roy Burton",
+      "starts": 16,
+      "substituteAppearances": 0,
+      "totalAppearances": 16,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 11,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 3,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 35,
+      "name": "John Butcher",
+      "starts": 23,
+      "substituteAppearances": 0,
+      "totalAppearances": 23,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 17,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 64,
+      "name": "Terry Donovan",
+      "starts": 3,
+      "substituteAppearances": 0,
+      "totalAppearances": 3,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 80,
+      "name": "David Fogg",
+      "starts": 43,
+      "substituteAppearances": 0,
+      "totalAppearances": 43,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 33,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 81,
+      "name": "Peter Foley",
+      "starts": 19,
+      "substituteAppearances": 3,
+      "totalAppearances": 22,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 12,
+          "substituteAppearances": 3
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 97,
+      "name": "David Grant",
+      "starts": 24,
+      "substituteAppearances": 0,
+      "totalAppearances": 24,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 20,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 103,
+      "name": "Steve Hardwick",
+      "starts": 18,
+      "substituteAppearances": 0,
+      "totalAppearances": 18,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 18,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 110,
+      "name": "Trevor Hebberd",
+      "starts": 50,
+      "substituteAppearances": 0,
+      "totalAppearances": 50,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 39,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 129,
+      "name": "Mark Jones",
+      "starts": 21,
+      "substituteAppearances": 8,
+      "totalAppearances": 29,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 19,
+          "substituteAppearances": 7
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 1,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 143,
+      "name": "George Lawrence",
+      "starts": 25,
+      "substituteAppearances": 0,
+      "totalAppearances": 25,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 22,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 149,
+      "name": "David Linney",
+      "starts": 35,
+      "substituteAppearances": 2,
+      "totalAppearances": 37,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 26,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 1,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 166,
+      "name": "Malcolm McIntosh",
+      "starts": 2,
+      "substituteAppearances": 0,
+      "totalAppearances": 2,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 2,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 207,
+      "name": "Malcolm Shotton",
+      "starts": 57,
+      "substituteAppearances": 0,
+      "totalAppearances": 57,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 46,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 216,
+      "name": "Tim Smithers",
+      "starts": 28,
+      "substituteAppearances": 3,
+      "totalAppearances": 31,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 24,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 0,
+          "substituteAppearances": 2
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 226,
+      "name": "Andy Thomas",
+      "starts": 18,
+      "substituteAppearances": 12,
+      "totalAppearances": 30,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 15,
+          "substituteAppearances": 9
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 2,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "League Cup",
+          "starts": 1,
+          "substituteAppearances": 2
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 232,
+      "name": "Ray Train",
+      "starts": 40,
+      "substituteAppearances": 2,
+      "totalAppearances": 42,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 33,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 2,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 1,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 237,
+      "name": "Mick Vinter",
+      "starts": 53,
+      "substituteAppearances": 1,
+      "totalAppearances": 54,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 42,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 3,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 4,
+          "substituteAppearances": 0
+        }
+      ]
+    },
+    {
+      "rageOnlinePlayerId": 245,
+      "name": "Neil Whatmore",
+      "starts": 22,
+      "substituteAppearances": 1,
+      "totalAppearances": 23,
+      "competitions": [
+        {
+          "competition": "League",
+          "starts": 22,
+          "substituteAppearances": 1
+        },
+        {
+          "competition": "FA Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "Football League Trophy",
+          "starts": 0,
+          "substituteAppearances": 0
+        },
+        {
+          "competition": "League Cup",
+          "starts": 0,
+          "substituteAppearances": 0
+        }
+      ]
+    }
+  ]
+}

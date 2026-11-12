@@ -1,0 +1,14 @@
+{
+  "name": "jon-narbett-game",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "import:rage": "node scripts/import-rage-seasons.mjs",
+    "db:seed": "node scripts/seed-db.mjs"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "pg": "^8.16.3"
+  }
+}
