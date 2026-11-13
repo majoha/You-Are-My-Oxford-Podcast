@@ -27,7 +27,7 @@ app.get('/api/game/new', async (_request, response) => {
         if (!seasons.length) return response.status(503).json({ error: 'No seasons have been imported yet.' });
         const season = seasons[0].season;
 
-        const [{ rows: players }, { rows: wrongPickCandidates }] = await Promise.all([
+        const [{ rows: players }, { rows: wrongPickCandidates }, { rows: computerBluffCandidates }] = await Promise.all([
             pool.query(
                 `SELECT p.display_name AS name, a.total_appearances AS "totalAppearances"
                  FROM season_appearances a
@@ -50,10 +50,29 @@ app.get('/api/game/new', async (_request, response) => {
                  ORDER BY name`,
                 [season]
             ),
+            pool.query(
+                `SELECT DISTINCT p.display_name AS name
+                 FROM players p
+                 JOIN season_appearances other_seasons
+                   ON other_seasons.player_id = p.id
+                  AND other_seasons.total_appearances > 0
+                  AND ABS(
+                    split_part(other_seasons.season, '/', 1)::INTEGER
+                    - split_part($1, '/', 1)::INTEGER
+                  ) <= 3
+                 WHERE NOT EXISTS (
+                   SELECT 1 FROM season_appearances current_season
+                   WHERE current_season.player_id = p.id
+                     AND current_season.season = $1
+                     AND current_season.total_appearances > 0
+                 )
+                 ORDER BY name`,
+                [season]
+            ),
         ]);
 
         response.set('Cache-Control', 'no-store');
-        response.json({ season, players, wrongPickCandidates: wrongPickCandidates.map(row => row.name) });
+        response.json({ season, players, wrongPickCandidates: wrongPickCandidates.map(row => row.name), computerBluffCandidates: computerBluffCandidates.map(row => row.name) });
     } catch (error) {
         console.error('Could not create game:', error);
         response.status(500).json({ error: 'Could not load a game season.' });
