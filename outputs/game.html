@@ -134,7 +134,7 @@
                 <p>The computer’s incorrect picks now come from... [ Redacted ;) ]</p>
 
                 <strong>v1.0.4 · Jon Narbett</strong>
-                <p>Added Jon Narbett as a very very hard opponent, with a 20-second timer for your turns. Dan and
+                <p>Added Jon Narbett as a very very hard opponent, with a 20 second timer for your turns. Dan and
                     Jon also have their own profile pictures.</p>
 
                 <strong>v1.0.3 · Database seasons</strong>
@@ -142,16 +142,16 @@
                 </p>
 
                 <strong>v1.0.2 · Rules and presentation</strong>
-                <p>Added the How to play panel, landing-page video and tagline, OUFC yellow styling, podcast and
+                <p>Added the How to play panel, landing page video and tagline, OUFC yellow styling, podcast and
                     sponsor links, and Rage Online attribution.</p>
 
                 <strong>v1.0.1 · Player entry and feedback</strong>
-                <p>Added typed player entry with suggestions and spelling matching, a players-named history, and
-                    clearer computer-turn feedback.</p>
+                <p>Added typed player entry with suggestions and spelling matching, a players named history, and
+                    clearer computer turn feedback.</p>
 
                 <strong>v1.0.0 · Game launch</strong>
                 <p>Introduced random seasons (3 seasons are available 82/83, 02/03, and 25/26), secret jokers,
-                    turn-based player naming, challenges, and the four
+                    turn based player naming, challenges, and the four
                     original computer opponents.</p>
 
             </ol>
@@ -300,7 +300,7 @@
                 $('notice').textContent = 'SEASON DATA UNAVAILABLE'; $('entryHint').textContent = error.message; return;
             }
             $('seasonLabel').textContent = `SEASON · ${state.season}`;
-            $('prompt').textContent = `${$('level').value} is choosing a joker…`; $('subtext').textContent = 'Type your secret joker below.';
+            $('prompt').textContent = `${$('level').value} has choosen a joker…`; $('subtext').textContent = 'Type your secret joker below.';
             $('entryHint').textContent = ''; setTurn('you');
         }
         function submitName(event) {
