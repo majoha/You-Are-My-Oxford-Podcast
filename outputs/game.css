@@ -1075,7 +1075,7 @@ button {
 
 /* Compact game title joins the top bar beside the partner logos */
 .top {
-    height: 88px;
+    height: 64px;
     gap: 18px;
     padding: 0 4vw;
 }
@@ -1569,6 +1569,16 @@ button {
     display: none;
 }
 
+/* Use Theo's provided portrait when he is the selected opponent */
+.joker.ai.theo-profile .avatar {
+    background: url('./assets/theo.webp') center 35% / cover no-repeat;
+}
+
+.joker.ai.theo-profile .avatar::before,
+.joker.ai.theo-profile .avatar::after {
+    display: none;
+}
+
 /* Apply OUFC yellow to game-page copy while preserving the player scoreline colors */
 body :not(.side):not(.side *) {
     color: var(--yellow) !important;
@@ -1626,6 +1636,7 @@ input::placeholder {
 .joker.ai.jon-profile .avatar {
     background: url('./assets/narbett%20oxford%20shirt.webp') center 35% / cover no-repeat;
 }
+
 .joker.ai.jon-profile .avatar::before,
 .joker.ai.jon-profile .avatar::after {
     display: none;
@@ -1633,22 +1644,48 @@ input::placeholder {
 
 
 /* Compact release notes in the Updates dialog */
-.updates-dialog { width: min(650px, 100%); }
-.updates-list { max-height: min(56vh, 520px); overflow-y: auto; padding-right: 8px; }
-.updates-list li { margin-bottom: 16px; }
-.updates-list li strong { display: block; margin-bottom: 4px; }
-.updates-list li p { margin: 0; line-height: 1.45; font-size: 13px; }
+.updates-dialog {
+    width: min(650px, 100%);
+}
+
+.updates-list {
+    max-height: min(56vh, 520px);
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+.updates-list li {
+    margin-bottom: 16px;
+}
+
+.updates-list li strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.updates-list li p {
+    margin: 0;
+    line-height: 1.45;
+    font-size: 13px;
+}
 
 /* Center the season label on the full scoreline, independent of side label widths */
-.scoreline { position: relative; }
+.scoreline {
+    position: relative;
+}
+
 .season-tag {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
 }
+
 @media (max-width: 700px) {
-    .scoreline { flex-wrap: wrap; }
+    .scoreline {
+        flex-wrap: wrap;
+    }
+
     .season-tag {
         position: static;
         order: 3;
@@ -1656,4 +1693,21 @@ input::placeholder {
         transform: none;
         text-align: center;
     }
+}
+
+
+/* Use the selected opponent's profile portrait */
+.joker.ai.james-profile .avatar {
+    background: url('./assets/James.webp') center 35% / cover no-repeat;
+}
+
+.joker.ai.james-profile .avatar::before,
+.joker.ai.james-profile .avatar::after,
+.joker.ai.matt-profile .avatar::before,
+.joker.ai.matt-profile .avatar::after {
+    display: none;
+}
+
+.joker.ai.matt-profile .avatar {
+    background: url('./assets/Matt.webp') center 35% / cover no-repeat;
 }

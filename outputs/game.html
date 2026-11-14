@@ -53,7 +53,7 @@
         </div>
         <section class="game">
             <div class="joker ai" id="aiJokerCard">
-                <div class="avatar"></div><small><span id="aiJokerLabel">JAMES</span> JOKER</small><b class="hidden"
+                <div class="avatar"></div><small><span id="aiJokerLabel">JAMES'</span> JOKER</small><b class="hidden"
                     id="aiJoker">Secret player</b>
             </div>
             <div class="joker you">
@@ -127,6 +127,9 @@
             <div class="eyebrow">JON NARBETT GAME</div>
             <h2 id="updatesTitle">Game updates</h2>
             <ol class="rules-list updates-list">
+                <strong>v1.0.7 · Added more pics</strong>
+                <p>Small layout changes. Matt and James have their own profile pictures</p>
+
                 <strong>v1.0.6 · Added updates Panel</strong>
                 <p>Added an updates panel to show recent updates</p>
 
@@ -264,7 +267,10 @@
             const rack = $('historyRack');
             $('historyCount').textContent = `${state.history.length} pick${state.history.length === 1 ? '' : 's'}`;
             if (!state.history.length) { rack.innerHTML = '<div class="history-empty">Players named during the match will appear here.</div>'; return; }
-            rack.innerHTML = state.history.map(item => `<article class="history-card ${item.by === 'you' ? 'you' : 'computer'} ${item.valid ? '' : 'invalid'}"><div class="history-avatar"><span>OUFC</span></div><div class="history-name">${escapeHtml(item.name)}</div><small>${item.by === 'you' ? 'YOU' : escapeHtml($('level').value.toUpperCase())}${item.valid ? '' : ' · CHECK?'}</small></article>`).join('');
+            rack.innerHTML = state.history.map(item => {
+                const revealInvalid = state.over && !item.valid;
+                return `<article class="history-card ${item.by === 'you' ? 'you' : 'computer'} ${revealInvalid ? 'invalid' : ''}"><div class="history-avatar"><span>OUFC</span></div><div class="history-name">${escapeHtml(item.name)}</div><small>${item.by === 'you' ? 'YOU' : escapeHtml($('level').value.toUpperCase())}${revealInvalid ? ' · CHECK?' : ''}</small></article>`;
+            }).join('');
             rack.scrollLeft = rack.scrollWidth;
         }
         function addHistory(player, by, valid) { state.history.push({ name: player.name, by, valid }); renderHistory(); }
@@ -281,7 +287,7 @@
             const requestId = ++gameStartRequest;
             stopPlayerTimer();
             state = { used: new Set(), history: [], turn: 'you', last: null, started: true, over: false, yourJoker: null, aiJoker: null, season: '', wrongPickCandidates: [], computerBluffCandidates: [] };
-            $('seasonLabel').textContent = 'SEASON · DRAWING'; $('aiName').textContent = $('level').value; $('aiJokerLabel').textContent = $('level').value.toUpperCase(); $('aiJokerCard').classList.toggle('dan-profile', $('level').value === 'Dan'); $('aiJokerCard').classList.toggle('jon-profile', $('level').value === 'Jon Narbett');
+            $('seasonLabel').textContent = 'SEASON · DRAWING'; $('aiName').textContent = $('level').value; $('aiJokerLabel').textContent = `${$('level').value.toUpperCase()}${$('level').value.toLowerCase().endsWith('s') ? "'" : "'S"}`; $('aiJokerCard').classList.toggle('james-profile', $('level').value === 'James'); $('aiJokerCard').classList.toggle('theo-profile', $('level').value === 'Theo'); $('aiJokerCard').classList.toggle('dan-profile', $('level').value === 'Dan'); $('aiJokerCard').classList.toggle('matt-profile', $('level').value === 'Matt'); $('aiJokerCard').classList.toggle('jon-profile', $('level').value === 'Jon Narbett');
             $('aiJoker').textContent = 'Secret player'; $('aiJoker').classList.add('hidden'); $('yourJoker').textContent = 'Choose below';
             $('prompt').textContent = 'Choosing a season…'; $('subtext').textContent = 'Getting that season’s player list ready.';
             $('notice').textContent = ''; $('nameInput').value = ''; $('nameInput').placeholder = 'Type a player name…'; $('nameInput').dataset.playerId = '';
@@ -376,7 +382,7 @@
             else end(false, `${state.last.player.name} did appear. An incorrect challenge forfeits the game.`);
         }
         function end(win, message) {
-            state.over = true; $('resultEyebrow').textContent = win ? 'YOU WIN' : 'GAME OVER'; $('resultEyebrow').className = `eyebrow ${win ? 'win' : 'lose'}`;
+            state.over = true; renderHistory(); $('resultEyebrow').textContent = win ? 'YOU WIN' : 'GAME OVER'; $('resultEyebrow').className = `eyebrow ${win ? 'win' : 'lose'}`;
             $('resultTitle').textContent = win ? 'That’s a proper result.' : 'Caught out.'; $('resultText').textContent = message; $('veil').style.display = 'flex';
             setTurn(state.turn); $('challenge').disabled = true;
         }
